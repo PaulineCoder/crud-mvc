@@ -3,20 +3,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>New user</title>
+    <title>Новый пользователь</title>
 </head>
 <body>
 <form th:method="POST" th:action="@{/users}" th:object="${user}">
-    <label for="name"> Enter name:</label>
+    <label for="name"> Введите имя:</label>
     <input th:type="text" th:field="*{name}" id="name"/>
     <br>
-    <label for="surname"> Enter surname:</label>
+    <label for="surname"> Введите фамилию:</label>
     <input th:type="text" th:field="*{surname}" id="surname"/>
     <br>
-    <label for="age"> Enter age:</label>
+    <label for="age"> Введите возраст:</label>
     <input th:type="text" th:field="*{age}" id="age"/>
     <br>
-    <input type="submit" value="create"/>
+    <input type="submit" value="создать"/>
 </form>
 </body>
 </html>

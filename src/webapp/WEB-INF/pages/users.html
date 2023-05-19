@@ -3,32 +3,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Users</title>
+    <title>Пользователи</title>
 </head>
 <body>
 <div>
     <br>
     <table border="1">
         <tr>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Age</th>
-            <th>Update</th>
-            <th>Delete</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Возраст</th>
+            <th>Изменить</th>
+            <th>Удалить</th>
         </tr>
         <tr th:each="user : ${users}">
             <td><a th:href="@{/users/{id}(id=${user.getId()})}" th:text="${user.getName()}"> </a></td>
             <td th:utext="${user.getSurname()}"></td>
             <td th:utext="${user.getAge()}"></td>
-            <td><a th:href="@{/users/{id}/update(id=${user.getId()})}">Update</a></td>
+            <td><a th:href="@{/users/{id}/update(id=${user.getId()})}">Изменить</a></td>
             <td><a>
                 <form th:method="DELETE" th:action="@{/users/{id}(id=${user.getId()})}"><input type="submit"
-                                                                                               value="Delete"></form>
+                                                                                               value="Удалить"></form>
             </a></td>
         </tr>
     </table>
     <br>
-    <a th:href="@{/users/new}">Add new user</a>
+    <a th:href="@{/users/new}">Добавить нового пользователя</a>
 </div>
 </body>
 </html>

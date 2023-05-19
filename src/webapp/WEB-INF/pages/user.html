@@ -3,27 +3,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User</title>
+    <title>Пользователь</title>
 </head>
 <body>
 <div>
     <br>
     <table border="1">
         <tr>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Age</th>
-            <th>Update</th>
-            <th>Delete</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Возраст</th>
+            <th>Изменить</th>
+            <th>Удалить</th>
         </tr>
         <tr>
             <td th:utext="${user.getName()}"></td>
             <td th:utext="${user.getSurname()}"></td>
             <td th:utext="${user.getAge()}"></td>
-            <td><a th:href="@{/users/{id}/update(id=${user.getId()})}">Update</a></td>
+            <td><a th:href="@{/users/{id}/update(id=${user.getId()})}">Изменить</a></td>
             <td><a>
                 <form th:method="DELETE" th:action="@{/users/{id}(id=${user.getId()})}"><input type="submit"
-                                                                                               value="Delete"></form>
+                                                                                               value="Удалить"></form>
             </a></td>
         </tr>
     </table>
